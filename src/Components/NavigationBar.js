@@ -4,7 +4,7 @@ export default function NavigationBar() {
   return (
     <div className="NavigationBar">
         <div className="AppName">
-          PokeDex
+          PokéMon Wiki
         </div>
     </div>
   )

@@ -7,12 +7,12 @@ const app = express();
 
 const POKEAPI_BASE_URL = 'https://pokeapi.co/api/v2';
 
-let pokemonDataCache = {};
+let pokemonDataCache = {}; // For the cache of the data fetched once
 
 app.get('/pokemon/:id/stats', async (req, res) => {
     try {
       const { id } = req.params;
-        // console.log(pokemonDataCache)
+      // if the data was fetched previously and stored in the variable
       if (pokemonDataCache.hasOwnProperty(id)) {
         const combinedData = pokemonDataCache[id];
         const { height, weight, stats, species, abilities, types} = combinedData.pokemon;
@@ -33,16 +33,20 @@ app.get('/pokemon/:id/stats', async (req, res) => {
         res.json(response);
         return;
       }
-  
+      
+      // Fetch the data from the API 
       const [pokemonResponse, speciesResponse] = await Promise.all([
         axios.get(`${POKEAPI_BASE_URL}/pokemon/${id}`),
         axios.get(`${POKEAPI_BASE_URL}/pokemon-species/${id}`),
       ]);
-  
+      
       const pokemon = pokemonResponse.data;
       const species = speciesResponse.data;
-  
+      
+      // Store the fetched json in CombinedData
       const combinedData = { pokemon: { ...pokemon, species } };
+
+      // Cache the data for the next call based on the id
       pokemonDataCache[id] = combinedData;
   
       const { height, weight, stats, species: cachedSpecies, abilities, types } = combinedData.pokemon;

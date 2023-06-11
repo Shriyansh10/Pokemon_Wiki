@@ -35,3 +35,70 @@
   cursor: pointer;
   right: 10%;
 }
+
+.Details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.LeftColumn {
+  margin-right: 20px;
+}
+
+.BasicStats{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 30px;
+    grid-column-gap: 183px;
+}
+
+.Heading {
+  font-size: 124px;
+  font-weight: bolder;
+  margin: 24px;
+}
+
+.Description {
+  font-size: 27px;
+  margin-bottom: 41px;
+}
+
+.Height,
+.Weight,
+.Gender,
+.Ability,
+.Category,
+.Type {
+  font-size: 25px;
+  margin-bottom: 5px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Stats {
+  font-size: 32px;
+  margin-top: 20px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.ul{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 30px;
+    grid-column-gap: 183px;
+}
+
+.li {
+  font-size: 25px;
+  list-style-type: none;
+  margin-bottom: 5px;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}

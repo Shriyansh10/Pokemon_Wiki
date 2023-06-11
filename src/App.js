@@ -5,6 +5,7 @@ import SearchBar from './Components/SearchBar.js';
 
 function App() {
 
+  // Rendering the components NavigationBar and SearchBar
   return (
     <div className="App">
       <NavigationBar/>
