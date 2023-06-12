@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import "../App.css";
-import PokemonDetails from './PokemonDetails';
-// import Api from '../Backend/Api';
+import Api from '../Backend/Api';
 
 function SearchBar() {
   const [searchTerm, setSearchTerm] = useState('');  //Get the name of the pokemon
@@ -9,13 +8,13 @@ function SearchBar() {
 
   // When the Name is being typed or State is being Changed
   const handleChange = (event) => {
+    setSubmitted(false);
     setSearchTerm(event.target.value);
   };
 
   // On Pressing Submit The Search Will Start Here
   const handleSubmit = (event) => {
-    event.preventDefault();
-    // Api(searchTerm);   Should be incase no error is shown	
+    event.preventDefault();	
     setSubmitted(true); 
   };
 
@@ -34,8 +33,8 @@ function SearchBar() {
       </form>
       {/* if submit is pressed, We will render the details */}
       {submitted && (
-        <PokemonDetails searchTerm={searchTerm} />
-      )}
+      <Api searchTerm={searchTerm} submitted ={submitted}/>
+    )}
     </div>
   );
 }

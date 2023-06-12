@@ -2,12 +2,15 @@ const express = require('express');
 const axios = require('axios');
 const { GenderHelper } = require('./GenderHelper');
 const { removeBackslashCommands } = require('./removeBackslashCommands');
-
+const cors = require('cors');
 const app = express();
+
 
 const POKEAPI_BASE_URL = 'https://pokeapi.co/api/v2';
 
 let pokemonDataCache = {}; // For the cache of the data fetched once
+
+app.use(cors());
 
 app.get('/pokemon/:id/stats', async (req, res) => {
     try {
