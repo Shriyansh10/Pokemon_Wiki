@@ -2,6 +2,17 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+The Parent Api used in this app is 'https://pokeapi.co/docs/v2'
+
+It fetches the data from the parent api and filter the data according to our requirements then a new api is created with the filtered data:
+(https://github.com/Shriyansh10/Pokemon_Wiki/assets/62295012/66e2bffe-1d6d-462e-9ee1-97edcb0dd8d5)
+
+The filtered data is then rendered on the frontend:
+(https://github.com/Shriyansh10/Pokemon_Wiki/assets/62295012/3a404a15-84fd-425e-a5d1-924e2ce4136a)
+(https://github.com/Shriyansh10/Pokemon_Wiki/assets/62295012/19f9f098-880a-4ffd-8603-90fd1652f857)
+In case of wrong input:
+(https://github.com/Shriyansh10/Pokemon_Wiki/assets/62295012/56620151-a5c8-4458-8111-a965355d2d62)
+
 ## Available Scripts
 
 In the project directory, you can run:
