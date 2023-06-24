@@ -10,6 +10,7 @@ It fetches the data from the parent api and filter the data according to our req
 The filtered data is then rendered on the frontend:
 (https://github.com/Shriyansh10/Pokemon_Wiki/assets/62295012/3a404a15-84fd-425e-a5d1-924e2ce4136a)
 (https://github.com/Shriyansh10/Pokemon_Wiki/assets/62295012/19f9f098-880a-4ffd-8603-90fd1652f857)
+
 In case of wrong input:
 (https://github.com/Shriyansh10/Pokemon_Wiki/assets/62295012/56620151-a5c8-4458-8111-a965355d2d62)
 
